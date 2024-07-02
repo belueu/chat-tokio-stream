@@ -9,6 +9,8 @@ async fn main() {
     let listner = TcpListener::bind("127.0.0.1:8080").await.unwrap();
     let (tx, _rx) = broadcast::channel(10);
 
+    println!("Hello");
+
     loop {
         let (mut socket, addr) = listner.accept().await.unwrap();
 
